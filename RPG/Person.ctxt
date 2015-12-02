@@ -1,0 +1,26 @@
+#BlueJ class context
+comment0.params=na\ hp\ lvl
+comment0.target=Person(java.lang.String,\ int,\ int)
+comment0.text=\r\n\ Constructor\ for\ objects\ of\ class\ Person\r\n
+comment1.params=
+comment1.target=java.lang.String\ getName()
+comment1.text=\r\n\ @return\ String\ the\ name\ of\ person.\r\n
+comment2.params=
+comment2.target=int\ getCurrentHealth()
+comment2.text=\r\n\ @return\ int\ the\ current\ health.\r\n
+comment3.params=
+comment3.target=int\ getMaxHealth()
+comment3.text=\r\n\ @return\ int\ the\ max\ health.\r\n
+comment4.params=
+comment4.target=int\ getLevel()
+comment4.text=\r\n\ @return\ int\ the\ current\ level.\r\n
+comment5.params=dmg
+comment5.target=void\ takeDamage(int)
+comment5.text=\r\n\ @param\ int\ the\ ammount\ to\ be\ subtracted\ from\ the\ monster\ health.\r\n
+comment6.params=dmg
+comment6.target=void\ healDamage(int)
+comment6.text=\r\n\ @param\ int\ the\ ammount\ to\ be\ subtracted\ from\ the\ monster\ health.\r\n
+comment7.params=
+comment7.target=java.lang.String\ toString()
+comment7.text=\r\n\ @return\ String\ description\ of\ person.\r\n
+numComments=8

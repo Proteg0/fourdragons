@@ -1,0 +1,5 @@
+#BlueJ class context
+comment0.params=min\ max\ name\ count\ next
+comment0.target=FrostSkill(int,\ int,\ java.lang.String,\ int,\ java.lang.String)
+comment0.text=\r\n\ Constructor\ for\ objects\ of\ class\ FrostSkill\r\n
+numComments=1
