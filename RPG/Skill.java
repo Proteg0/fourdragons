@@ -1,9 +1,11 @@
 import java.util.Random;
 /**
- * Abstract class Skill - write a description of the class here
+ * Abstract class Skill - 
+ * Skills are how a player levels and deals damage.
+ * All stats that are universal to all skills(such as damage) are held here.
  * 
- * @author (your name here)
- * @version (version number or date here)
+ * @author Christopher Easton 
+ * @version Alpha 0.1 // 12/01/2015
  */
 public abstract class Skill
 {

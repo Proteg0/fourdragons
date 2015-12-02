@@ -1,9 +1,10 @@
-
+import java.io.*;
 /**
- * Write a description of class Game here.
+ * This class holds the functionality of four dragons rpg.
+ * All calls from the GUI will pass through this class.
  * 
- * @author (your name) 
- * @version (a version number or a date)
+ * @author Christopher Easton 
+ * @version Alpha 0.1 // 12/01/2015
  */
 public class Game
 {
@@ -202,16 +203,16 @@ public class Game
      */
     public void newPlayer()
     {
-        player = new Player("Player 1",20,1);
+        player = new Player("Player 1",1);
 
     }
 
     /**
      * Creates a new custom player.
      */
-    public void newPlayer(String s, int hp, int lvl)
+    public void newPlayer(String s, int lvl)
     {
-        player = new Player(s,hp,lvl);
+        player = new Player(s,lvl);
 
     }
 
@@ -302,4 +303,65 @@ public class Game
         difficulty = -1;
     }
 
+    //--------------------------------------------SAVE----------------------------------------------
+    /**
+     * @return Boolean attempts to save the game and returns if successful. 
+     */
+    public Boolean saveGame()
+    {
+        boolean saved;
+        try{
+            FileWriter writer = new FileWriter(player.getName()+".txt");
+            writer.write(player.getName()+","+player.getLevel()+","+player.getSkills());
+            writer.close();
+            saved = true;
+        }
+        catch(IOException e){
+            saved = false;
+        }
+        return saved;
+    }
+    
+    /**
+     * @return String attempts to load the game and returns if player info if successful. 
+     * @param String the name of the file.
+     */
+    public String loadGame(String s)
+    {
+        String load;
+        try{
+            BufferedReader read = new BufferedReader(new FileReader(s+".txt"));
+            String line = read.readLine();
+            read.close();
+            load = line;
+        }
+        catch(FileNotFoundException e){
+            load = null;
+        }
+        catch(IOException e){
+            load = null;
+        }
+        return load;
+    }
+    
+    /**
+     * Sets the skills of the players, primarily after a load of saved data.
+     * @param String the name of the first skill.
+     * @param String the name of the second skill.
+     * @param String the name of the third skill.
+     * @param String the name of the fourth skill.
+     * @return boolean true if all skills were set successfully.
+     */
+    public boolean setPlayerSkills(String one, String two, String fire, String frost)
+    {
+        boolean set,oh,th,fi,fr;
+        set = false;
+        oh= player.setOneSkill(one);
+        th=player.setTwoSkill(two);
+        fi=player.setFireSkill(fire);
+        fr=player.setFrostSkill(frost);
+        if(oh&&th&&fi&&fr)
+        {set = true;}
+        return set;
+    }
 }

@@ -1,9 +1,9 @@
 
 /**
- * Write a description of class NoSuchSkillException here.
+ * This Exception is to be called anytime a skill not loaded into the SkillList is called.
  * 
- * @author (your name) 
- * @version (a version number or a date)
+ * @author Christopher Easton 
+ * @version Alpha 0.1 // 12/01/2015
  */
 public class NoSuchSkillException extends Exception
 {

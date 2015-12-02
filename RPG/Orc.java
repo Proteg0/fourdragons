@@ -2,8 +2,8 @@
 /**
  * Write a description of class Orc here.
  * 
- * @author (your name) 
- * @version (a version number or a date)
+ * @author Christopher Easton 
+ * @version Alpha 0.1 // 12/01/2015
  */
 public class Orc extends Monster
 {

@@ -1,10 +1,10 @@
 import java.util.HashMap;
 import java.util.Map.Entry;
 /**
- * Write a description of class SkillList here.
+ * All skills should be predefined in this class and held as a list for other classes to access.
  * 
- * @author (your name) 
- * @version (a version number or a date)
+ * @author Christopher Easton 
+ * @version Alpha 0.1 // 12/01/2015
  */
 public class SkillList
 {
@@ -34,7 +34,7 @@ public class SkillList
     {
         //-------ONE-HAND-SKILLS--------------
         oneList.put("Punch", new OneHandSkill(2,3,"Punch",10,"Thrust"));
-        oneList.put("Thrust", new OneHandSkill(4,7,"Jab",10,"Thrust"));
+        oneList.put("Thrust", new OneHandSkill(4,7,"Thrust",10,"Thrust"));
         
         //-------TWO-HAND-SKILLS--------------
         twoList.put("Shove", new TwoHandSkill(1,4,"Shove",10,"Cleave"));

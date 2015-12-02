@@ -1,10 +1,10 @@
 import java.util.HashMap;
 import java.util.ArrayList;
 /**
- * Write a description of class ItemList here.
+ * All items should be predefined in this class and held as a list for other classes to access.
  * 
- * @author Chris Easton 
- * @version Alpha 0.1
+ * @author Christopher Easton 
+ * @version Alpha 0.1 // 12/01/2015
  */
 public class ItemList
 {

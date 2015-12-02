@@ -2,8 +2,8 @@
 /**
  * Write a description of class Building here.
  * 
- * @author (your name) 
- * @version (a version number or a date)
+ * @author Christopher Easton 
+ * @version Alpha 0.1 // 12/01/2015
  */
 public class Building extends Field
 {

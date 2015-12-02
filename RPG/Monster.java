@@ -1,9 +1,11 @@
 
 /**
- * Write a description of class Monster here.
+ * Monsters make up all NPC characters in the game.
+ * All stats that are unique to monsters 
+ * yet held constant between all monsters should be held here.
  * 
- * @author (your name) 
- * @version (a version number or a date)
+ * @author Christopher Easton 
+ * @version Alpha 0.1 // 12/01/2015
  */
 public class Monster extends Person
 {
