@@ -1,0 +1,25 @@
+#BlueJ class context
+comment0.params=min\ max\ name\ count\ next
+comment0.target=Skill(int,\ int,\ java.lang.String,\ int,\ java.lang.String)
+comment0.text=\r\n\ Constructor\ for\ objects\ of\ class\ Skill\r\n
+comment1.params=
+comment1.target=int\ getMin()
+comment1.text=\r\n\ @return\ int\ the\ minimum\ damage.\r\n
+comment2.params=
+comment2.target=int\ getMax()
+comment2.text=\r\n\ @return\ int\ the\ maximum\ damage.\r\n
+comment3.params=
+comment3.target=int\ getCounter()
+comment3.text=\r\n\ @return\ int\ the\ maximum\ damage.\r\n
+comment4.params=
+comment4.target=java.lang.String\ getName()
+comment4.text=\r\n\ @return\ String\ the\ Name\ of\ the\ skill.\r\n
+comment5.params=
+comment5.target=java.lang.String\ getNext()
+comment5.text=\r\n\ @return\ String\ the\ Name\ of\ the\ next\ skill.\r\n
+comment6.params=
+comment6.target=int\ getDmg()
+comment6.text=\r\n\ @return\ int\ the\ maximum\ damage.\r\n
+comment7.params=
+comment7.target=boolean\ skillUP()
+numComments=8

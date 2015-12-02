@@ -1,0 +1,26 @@
+#BlueJ class context
+comment0.params=na\ hp\ lvl
+comment0.target=Player(java.lang.String,\ int,\ int)
+comment0.text=\r\n\ Constructor\ for\ objects\ of\ class\ Player\r\n\ @param\ String\ the\ name\ for\ the\ character.\r\n\ @param\ int\ the\ starting\ hitpoints\ the\ character.\r\n\ @param\ int\ the\ starting\ level\ for\ the\ character.\r\n
+comment1.params=na\ hp\ lvl\ hg
+comment1.target=Player(java.lang.String,\ int,\ int,\ int)
+comment1.text=\r\n\ Constructor\ used\ to\ add\ a\ variable\ to\ health\ gain\ other\ than\ 10.\r\n\ @param\ String\ the\ name\ for\ the\ character.\r\n\ @param\ int\ the\ starting\ hitpoints\ the\ character.\r\n\ @param\ int\ the\ starting\ level\ for\ the\ character.\r\n\ @param\ int\ the\ health\ gained\ per\ level.\r\n
+comment2.params=
+comment2.target=void\ setSkills()
+comment2.text=\r\n\ Sets\ the\ starting\ skills.\r\n
+comment3.params=
+comment3.target=int\ getOneDmg()
+comment3.text=\r\n\ @return\ int\ the\ damage\ from\ the\ OneHandSkill.\r\n
+comment4.params=
+comment4.target=int\ getTwoDmg()
+comment4.text=\r\n\ @return\ int\ the\ damage\ from\ the\ TwoHandSkill.\r\n
+comment5.params=
+comment5.target=int\ getFireDmg()
+comment5.text=\r\n\ @return\ int\ the\ damage\ from\ the\ FireSkill.\r\n
+comment6.params=
+comment6.target=int\ getFrostDmg()
+comment6.text=\r\n\ @return\ int\ the\ damage\ from\ the\ FrostSkill.\r\n
+comment7.params=
+comment7.target=int\ healthGain()
+comment7.text=\r\n\ @return\ int\ the\ health\ gained\ per\ level.\r\n
+numComments=8

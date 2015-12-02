@@ -1,0 +1,8 @@
+#BlueJ class context
+comment0.params=x\ y
+comment0.target=Building(int,\ int)
+comment0.text=\r\n\ Constructor\ for\ objects\ of\ class\ Building\r\n
+comment1.params=
+comment1.target=java.lang.String\ toString()
+comment1.text=\r\n\ @return\ String\ description\ of\ Building.\r\n
+numComments=2

@@ -1,0 +1,11 @@
+#BlueJ class context
+comment0.params=na\ hp\ lvl
+comment0.target=Monster(java.lang.String,\ int,\ int)
+comment0.text=\r\n\ Constructor\ for\ objects\ of\ class\ Monster\r\n
+comment1.params=
+comment1.target=int\ getDmg()
+comment1.text=\r\n\ @return\ int\ Damage\ this\ monster\ deals\ in\ combat.\r\n
+comment2.params=
+comment2.target=java.lang.String\ toString()
+comment2.text=\r\n\ @return\ String\ description\ of\ Monster.\r\n
+numComments=3

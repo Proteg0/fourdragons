@@ -1,0 +1,14 @@
+#BlueJ class context
+comment0.params=
+comment0.target=WorldMap()
+comment0.text=\r\n\ Creates\ an\ array\ list\ to\ hold\ all\ rooms\ we\ make\ during\ creation\ of\ the\ game.\r\n
+comment1.params=loc\ field
+comment1.target=void\ addField(int,\ Field)
+comment1.text=\r\n\ Adds\ a\ room\ to\ the\ array\ list.\r\n\ @param\ Room\ adds\ a\ room\ to\ the\ array\ list\ \r\n
+comment2.params=loc
+comment2.target=Field\ getField(int)
+comment2.text=\r\n\ Used\ for\ when\ a\ random\ room\ is\ needed,\ such\ as\ moving\ from\ a\ transporter\ room.\r\n\ \ @param\ Room\ returns\ a\ random\ room\ from\ the\ array\ list.\r\n
+comment3.params=
+comment3.target=void\ incrimentLocations()
+comment3.text=\r\n\ Updates\ each\ existing\ field.\r\n
+numComments=4
