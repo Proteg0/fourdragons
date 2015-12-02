@@ -2,8 +2,8 @@
 /**
  * Abstract class MagicSkill - write a description of the class here
  * 
- * @author (your name here)
- * @version (version number or date here)
+ * @author Christopher Easton 
+ * @version Alpha 0.1 // 12/01/2015
  */
 public abstract class MagicSkill extends Skill
 {

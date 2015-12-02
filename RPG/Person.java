@@ -1,9 +1,10 @@
 
 /**
- * Abstract class Person - write a description of the class here
+ * Abstract class Person
+ * This should hold the varrables that are shared across all monsters and players.
  * 
- * @author (your name here)
- * @version (version number or date here)
+ * @author Christopher Easton 
+ * @version Alpha 0.1 // 12/01/2015
  */
 public abstract class Person
 {

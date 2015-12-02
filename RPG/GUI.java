@@ -2,10 +2,10 @@ import java.awt.*;
 import java.awt.event.*;
 import javax.swing.*;
 /**
- * Write a description of class GUI here.
+ * This class hold all of the current GUI elements for four dragons rpg.
  * 
- * @author (your name) 
- * @version (a version number or a date)
+ * @author Christopher Easton 
+ * @version Alpha 0.1 // 12/01/2015
  */
 public class GUI extends JFrame
 {
@@ -56,7 +56,6 @@ public class GUI extends JFrame
         makeSouthMove();
         contentPane.add(south, BorderLayout.SOUTH);
         nextCard("move");
-             
 
         //-------------------------------------------EAST------------------------------------------
         east = new JPanel(new GridLayout(2,1));
@@ -95,25 +94,31 @@ public class GUI extends JFrame
         JMenu filemenu = new JMenu ("File");
         menu.add(filemenu);
 
-        JMenuItem quitItem = new JMenuItem ("Quit");
-        quitItem.addActionListener(new ActionListener(){
-                public void actionPerformed(ActionEvent event){quit();} });
-        filemenu.add(quitItem);
-
         JMenuItem helpItem = new JMenuItem ("Help");
         helpItem.addActionListener(new ActionListener(){
                 public void actionPerformed(ActionEvent event){help();} });
         filemenu.add(helpItem);
 
-        JMenuItem aboutItem = new JMenuItem ("About");
-        aboutItem.addActionListener(new ActionListener(){
-                public void actionPerformed(ActionEvent event){about();} });
-        filemenu.add(aboutItem);
+        JMenuItem saveItem = new JMenuItem ("Save");
+        saveItem.addActionListener(new ActionListener(){
+                public void actionPerformed(ActionEvent event){save();} });
+        filemenu.add(saveItem);
+        
+        JMenuItem loadItem = new JMenuItem ("Load");
+        loadItem.addActionListener(new ActionListener(){
+                public void actionPerformed(ActionEvent event){loadGame();} });
+        filemenu.add(loadItem);
 
         JMenuItem newPlayer = new JMenuItem ("New Game");
         newPlayer.addActionListener(new ActionListener(){
                 public void actionPerformed(ActionEvent event){newGame();} });
         filemenu.add(newPlayer);
+        
+        JMenuItem quitItem = new JMenuItem ("Quit");
+        quitItem.addActionListener(new ActionListener(){
+                public void actionPerformed(ActionEvent event){quit();} });
+        filemenu.add(quitItem);
+
 
         JMenu diffmenu = new JMenu ("Difficulty");
         menu.add(diffmenu);
@@ -159,7 +164,6 @@ public class GUI extends JFrame
         moveSouth.addActionListener(new ActionListener(){
                 public void actionPerformed(ActionEvent event){println(game.moveSouth());playerStats();}});
         south1 = new JPanel(new FlowLayout());
-        
 
         south1.add(moveWest);
         south1.add(moveEast);
@@ -199,7 +203,7 @@ public class GUI extends JFrame
         south.add(south2,"combat");
         //contentPane.add(south, BorderLayout.SOUTH);
     }
-    
+
     /**
      * Changes the south panel.
      * @param String the panel to be shown
@@ -209,10 +213,9 @@ public class GUI extends JFrame
         CardLayout cl = (CardLayout) south.getLayout();
         cl.show(south, s);
         south.revalidate();
-    
+
     }
-    
-    
+
     //------------------------------------------COMBAT-----------------------------------------
     /**
      * Attacks using OneHand Skill.
@@ -323,7 +326,7 @@ public class GUI extends JFrame
         playerText.append("\n");
 
     }
-    
+
     /**
      * Searches the field and returns information on what is present.
      */
@@ -332,13 +335,11 @@ public class GUI extends JFrame
         enemyText.setText("");
         enemyText.append(game.enemyName());
         enemyText.append("\n");
-        
+
         enemyText.append("HP: "+game.enemyCurrentHP()+"/"+game.enemyMaxHP());
         enemyText.append("\n");
-        
 
     }
-
     //---------------------------------EAST FUNCTIONS--------------------------------------
     /**
      * Searches the field and returns information on what is present.
@@ -362,19 +363,30 @@ public class GUI extends JFrame
         else{println("There is nothing to attack.");}
     }
 
-    
     //---------------------------------MENU FUNCTIONS--------------------------------------
     /**
      * Prints out the help text.
      */
     public void help(){
-
+        println("Welcome to Four Dragons!\n");
+        println("The point to this game is to slay the four dragons \nlocated somewhere on the map.\n");
+        println("Use the directional buttons below to move in that direction\n");
+        println("If you look at the top of your screen you will see \na box that shows your current location and health\n");
+        println("When you find an enemy you can ckick the attack button to the right.\n");
+        println("When in combat the buttons below will change from movement to attack buttons\n");
+        println("BEWARE: Once in combat it is a fight to the death, no running away!\n");
+        println("We hope you enjoy Four Dragons!\n");
     }
 
     /**
      * Prints out the about text.
      */
-    public void about(){println();}
+    public void save(){
+        if(game.saveGame())
+        {println("Your game has been saved");}
+        else
+        {println("There was an error in saving your game, oops.");}
+    }
 
     /**
      * Exits the Program.
@@ -388,9 +400,32 @@ public class GUI extends JFrame
     {
         game = new Game();
 
-        game.newPlayer(getNewName(),20,1);
+        game.newPlayer(getNewName(),1);
         frame.dispose();
         makeFrame();
+    }
+
+    /**
+     * Creates a new game.
+     */
+    public void loadGame()
+    {
+
+        String load = game.loadGame(getNewName());
+        if(load!=null)
+        {
+            game = new Game();
+            String[] stats = load.split(",");
+            game.newPlayer(stats[0],Integer.parseInt(stats[1]));
+            boolean comp = game.setPlayerSkills(stats[2],stats[3],stats[4],stats[5]);
+            frame.dispose();
+            makeFrame();
+            if(!comp){println("Not all skills loaded correctly.");}
+        }
+        else
+        {
+            println("There was an error in loading that game file.");
+        }
     }
 
     /**

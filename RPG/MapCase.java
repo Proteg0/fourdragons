@@ -1,10 +1,12 @@
 import java.util.HashMap;
 import java.util.Map.Entry;
 /**
- * Write a description of class WorldMap here.
+ * This is the global map for four dragons rpg.
+ * This class holds a predefined map and the ability to generate an infinate map.
+ * Within this class are instances of Fields and WorldMap objects used to create the global map.
  * 
- * @author (your name) 
- * @version (a version number or a date)
+ * @author Christopher Easton 
+ * @version Alpha 0.1 // 12/01/2015
  */
 public class MapCase
 {

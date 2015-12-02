@@ -2,8 +2,8 @@
 /**
  * Write a description of class Player here.
  * 
- * @author (your name) 
- * @version (a version number or a date)
+ * @author Christopher Easton 
+ * @version Alpha 0.1 // 12/01/2015
  */
 public class Player extends Person
 {
@@ -25,9 +25,9 @@ public class Player extends Person
      * @param int the starting hitpoints the character.
      * @param int the starting level for the character.
      */
-    public Player(String na, int hp, int lvl)
+    public Player(String na, int lvl)
     {
-        super(na,hp,lvl);
+        super(na,((lvl*10)+10),lvl);
         healthGain = 10;
         setSkills();
     }
@@ -46,7 +46,6 @@ public class Player extends Person
         setSkills();
     }
 
-    
     //------------------------------------------SKILLS-----------------------------------------------
     /**
      * Sets the starting skills.
@@ -64,6 +63,94 @@ public class Player extends Person
         {
             System.out.println(e);
         }
+    }
+    
+    /**
+     * Sets the OneHand skill.
+     * @param String the name of the skill.
+     * @return boolean returns true if the skill was set successfully.
+     */
+    public boolean setOneSkill(String s)
+    {
+        boolean set;
+        try{
+            one = sList.getOneSkill(s);
+            set = true;
+        }
+        catch(NoSuchSkillException e)
+        {
+            System.out.println(e);
+            set = false;
+        }
+        return set;
+    }
+    
+    /**
+     * Sets the OneHand skill.
+     * @param String the name of the skill.
+     * @return boolean returns true if the skill was set successfully.
+     */
+    public boolean setTwoSkill(String s)
+    {
+        boolean set;
+        try{
+            two = sList.getTwoSkill(s);
+            set = true;
+        }
+        catch(NoSuchSkillException e)
+        {
+            System.out.println(e);
+            set = false;
+        }
+        return set;
+    }
+    
+    /**
+     * Sets the OneHand skill.
+     * @param String the name of the skill.
+     * @return boolean returns true if the skill was set successfully.
+     */
+    public boolean setFireSkill(String s)
+    {
+        boolean set;
+        try{
+            fire = sList.getFireSkill(s);
+            set = true;
+        }
+        catch(NoSuchSkillException e)
+        {
+            System.out.println(e);
+            set = false;
+        }
+        return set;
+    }
+    
+    /**
+     * Sets the OneHand skill.
+     * @param String the name of the skill.
+     * @return boolean returns true if the skill was set successfully.
+     */
+    public boolean setFrostSkill(String s)
+    {
+        boolean set;
+        try{
+            frost = sList.getFrostSkill(s);
+            set = true;
+        }
+        catch(NoSuchSkillException e)
+        {
+            System.out.println(e);
+            set = false;
+        }
+        return set;
+    }
+
+    /**
+     * @return String the skills the player currently has.
+     */
+    public String getSkills()
+    {
+        return (one.getName()+","+two.getName()+","+fire.getName()+","+frost.getName());
     }
 
     /**
@@ -86,7 +173,7 @@ public class Player extends Person
         }
         return dmg;
     }
-    
+
     /**
      * @return int the damage from the TwoHandSkill.
      */
@@ -96,7 +183,7 @@ public class Player extends Person
         twoCount++;
         try
         {
-            if(oneCount>=one.getCounter())
+            if(twoCount>=two.getCounter())
             {
                 two = sList.getTwoSkill(two.getNext());
             }
@@ -107,7 +194,7 @@ public class Player extends Person
         }
         return dmg;
     }
-    
+
     /**
      * @return int the damage from the FireSkill.
      */
@@ -117,7 +204,7 @@ public class Player extends Person
         fireCount++;
         try
         {
-            if(oneCount>=one.getCounter())
+            if(fireCount>=fire.getCounter())
             {
                 fire = sList.getFireSkill(fire.getNext());
             }
@@ -128,7 +215,7 @@ public class Player extends Person
         }
         return dmg;
     }
-    
+
     /**
      * @return int the damage from the FrostSkill.
      */
@@ -138,7 +225,7 @@ public class Player extends Person
         frostCount++;
         try
         {
-            if(oneCount>=one.getCounter())
+            if(frostCount>=frost.getCounter())
             {
                 frost = sList.getFrostSkill(frost.getNext());
             }

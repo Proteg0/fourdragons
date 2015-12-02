@@ -1,9 +1,12 @@
 import java.util.ArrayList;
 /**
- * Abstract class Field - write a description of the class here
+ * Abstract class Field - 
+ * Fields are the zones or locations to be used in four dragons rpg.
+ * The Field will hold info such as monsters and items held in that location
+ * as well as the rate at which such items spawn and its own location on the global map.
  * 
- * @author (your name here)
- * @version (version number or date here)
+ * @author Christopher Easton 
+ * @version Alpha 0.1 // 12/01/2015
  */
 public abstract class Field
 {

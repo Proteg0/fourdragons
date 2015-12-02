@@ -1,8 +1,8 @@
 /**
  * Write a description of class GrassLand here.
  * 
- * @author (your name) 
- * @version (a version number or a date)
+ * @author Christopher Easton 
+ * @version Alpha 0.1 // 12/01/2015
  */
 public class GrassLand extends Field
 {

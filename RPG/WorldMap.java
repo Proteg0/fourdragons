@@ -1,10 +1,10 @@
 import java.util.HashMap;
 import java.util.Map.Entry;
 /**
- * Write a description of class WorldMap here.
+ * WorldMap is a collection of Fields along a single axis.
  * 
- * @author Chris Easton 
- * @version Alpha 0.1
+ * @author Christopher Easton 
+ * @version Alpha 0.1 // 12/01/2015
  */
 public class WorldMap
 {
